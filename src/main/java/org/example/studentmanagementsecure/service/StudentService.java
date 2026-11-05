@@ -47,7 +47,6 @@ public class StudentService {
         }
         studentRepository.save(existingStudent);
         return mapToUpdateDTO(existingStudent);
-
     }
     public void softDeleteStudentById(Long id){
         Student student=studentRepository.findByIdAndDeletedFalse(id).orElseThrow(()->new ResourceNotFoundException("Student with id "+id+" is already deleted"));
