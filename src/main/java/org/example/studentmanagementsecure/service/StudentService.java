@@ -58,23 +58,6 @@ public class StudentService {
         List<Student> studentList=studentRepository.findAllByDepartmentAndDeletedFalse(department);
         return mapToCreateListDTO(studentList);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     private Student mapToCreateEntity(CreateStudentRequestDTO createStudentRequestDTO){
         Student student=new Student();
         student.setName(createStudentRequestDTO.getName());
